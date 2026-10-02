@@ -13,10 +13,13 @@ void main() {
     // 10,20,30,40. Iterate through the array using the integer i and
     // print out the value of i.
     int[] distance = {10,20,30,40};
+    for (int i; i<distance.length; i++;){
+        System.out.println(i);
+    } 
 
     //Create an double array named `motorSpeeds` that holds the values
     // 0.1, 0.2, 0.3, 0.4, 0.5, Then print out the length of the
     // motorSpeeds array
     double[] motorSpeeds = {0.1,0.2,0.3,0.4,0.5};
-
+    System.out.println(motorSpeeds.length);
 }
