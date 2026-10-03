@@ -5,11 +5,18 @@
  */
 
 // Import `ArrayList` and `List` from the `java.util` package.
-
+import java.util.ArrayList;
+import java.util.List
 
 // Define an interface named `IntakeSensor` with a single method:
 // `double distanceMillimeters();`
-
+interface IntakeSensor{
+    public double distanceMillimeters(){
+        class BeamBreak{
+            
+        }
+    }
+}
 
 // Create a `BeamBreak` class that implements `IntakeSensor`.
 // The method `distanceMillimeters()` should return `3.0`.
