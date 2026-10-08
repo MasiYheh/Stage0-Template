@@ -11,26 +11,46 @@ import java.util.List
 // Define an interface named `IntakeSensor` with a single method:
 // `double distanceMillimeters();`
 interface IntakeSensor{
-    public double distanceMillimeters(){
-        class BeamBreak{
-            
-        }
+    void distanceMillimeters(){
     }
 }
 
 // Create a `BeamBreak` class that implements `IntakeSensor`.
 // The method `distanceMillimeters()` should return `3.0`.
-
+class BeamBreak implements IntakeSensor {
+    @Override
+    public double distanceMillimeters(){
+        return 3.0;
+    }
+}
 
 // Create a `LaserCAN` class that implements `IntakeSensor`.
 // The method `distanceMillimeters()` should return `5.0`.
-
+class LaserCAN implements IntakeSensor {
+    @Override
+    public double distanceMillimeters(){
+        return 5.0;
+    }
+}
 
 // Define a generic class named `Pair<A, B>` with two private final fields:
 // `first` of type `A`, and `second` of type `B`.
 // Provide a constructor `Pair(A first, B second)` and getter methods
 // `getFirst()` and `getSecond()`.
-
+public class Pair<A,B> {
+    private final double first;
+    private final double second;
+    public Pair(A first, B second){
+        this.first = first;
+        this.second = second;
+    }
+    public getFirst(){
+        return this.first;
+    }
+    public getSecond(){
+        return this.second;
+    }
+}
 
 void main() {
     // Create a variable named `beamBreak` with type `IntakeSensor`, and assign it a new instance of BeamBreak.
