@@ -6,13 +6,12 @@
 
 // Import `ArrayList` and `List` from the `java.util` package.
 import java.util.ArrayList;
-import java.util.List
+import java.util.List;
 
 // Define an interface named `IntakeSensor` with a single method:
 // `double distanceMillimeters();`
 interface IntakeSensor{
-    void distanceMillimeters(){
-    }
+    double distanceMillimeters();
 }
 
 // Create a `BeamBreak` class that implements `IntakeSensor`.
@@ -37,44 +36,50 @@ class LaserCAN implements IntakeSensor {
 // `first` of type `A`, and `second` of type `B`.
 // Provide a constructor `Pair(A first, B second)` and getter methods
 // `getFirst()` and `getSecond()`.
-public class Pair<A, B> {
+class Pair<A, B> {
     private final A first;
     private final B second;
-    public Pair(A first, B second){
+    
+    Pair(A first, B second){
         this.first = first;
         this.second = second;
     }
-    public getFirst(){
-        return this.first;
+    public A getFirst(){
+        return first;
     }
-    public getSecond(){
-        return this.second;
+    public B getSecond(){
+        return second;
     }
 }
 
-void main() {
+public class MyCoolFile {
+    public static void main(String[] args) {
     // Create a variable named `beamBreak` with type `IntakeSensor`, and assign it a new instance of BeamBreak.
     // Create a variable named `laserCAN` of type `IntakeSensor`, and assign it a new instance of LaserCAN.
     // Print the result of calling `distanceMillimeters()` on both sensors.
-    IntakeSensor beamBreak = new BeamBreak;
-    IntakeSensor laserCAN = new LaserCAN;
+    IntakeSensor beamBreak = new BeamBreak();
+    IntakeSensor laserCAN = new LaserCAN();
     System.out.println(beamBreak.distanceMillimeters());
     System.out.println(laserCAN.distanceMillimeters());
 
     // Create a Pair of String and Integer (Pair<String, Integer>) with the values "Robot" and 254.
     // Print the first value and the second value separated by a space using getFirst() and getSecond().
-    Pair<String, Integer> Roboty = new ArrayList<"Robot", 254>();
-    System.out.println(Roboty.getFirst());
     
-
+    Pair<String, Integer> Roboty = new Pair<>("Robot", 254);
+    System.out.println(Roboty.getFirst() + " " + Roboty.getSecond());
     // Create a List of Strings (`List<String>`) named `subsystems` using `new ArrayList<>()`.
     // Add the strings "Drivetrain", "Intake", and "Shooter" to `subsystems`.
-
+    List<String> subsystems = new ArrayList<>();
+    subsystems.add("Drivetrain");
+    subsystems.add("Intake");
+    subsystems.add("Shooter");
 
     // Print the size of the `subsystems` list.
-
+    System.out.println(subsystems.size());
 
     // Using a for-each loop, iterate over `subsystems` and print each subsystem name.
-
-
+    for (String currentSystem : subsystems){
+        System.out.println(currentSystem);
+        }
+    }
 }
