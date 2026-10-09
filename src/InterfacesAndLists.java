@@ -52,7 +52,7 @@ class Pair<A, B> {
     }
 }
 
-public class MyCoolFile {
+public class InterfacesAndLists {
     public static void main(String[] args) {
     // Create a variable named `beamBreak` with type `IntakeSensor`, and assign it a new instance of BeamBreak.
     // Create a variable named `laserCAN` of type `IntakeSensor`, and assign it a new instance of LaserCAN.
